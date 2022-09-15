@@ -1,3 +1,5 @@
+package hashtable;
+
 public class empNodeList {
     public empNode head;
 

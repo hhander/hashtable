@@ -1,3 +1,5 @@
+package hashtable;
+
 import java.util.Scanner;
 
 public class hashTableDemo {

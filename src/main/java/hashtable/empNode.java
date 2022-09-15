@@ -1,3 +1,5 @@
+package hashtable;
+
 public class empNode {
     public int id;
     public String name;
@@ -10,7 +12,7 @@ public class empNode {
 
     @Override
     public String toString() {
-        return "empNode{" +
+        return "hashtable.empNode{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

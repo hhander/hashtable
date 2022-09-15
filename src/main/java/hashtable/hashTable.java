@@ -1,3 +1,5 @@
+package hashtable;
+
 public class hashTable {
     public empNodeList[] hashList;
     public int size;
