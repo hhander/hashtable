@@ -6,6 +6,7 @@ public class empNodeList {
         if(head == null)
         {
             head = emp;
+            return;
         }
         empNode tmp = head;
         while(true)
@@ -43,33 +44,44 @@ public class empNodeList {
             {
                 return tmp;
             }
+
             tmp = tmp.next;
+
+            if(tmp == null)
+            {
+                return null;
+            }
+
         }
+
     }
 
     public void delete(int id)
     {
-        if(isEmpty())
+        if(head.id == id)
         {
-            System.out.println("链表为空");
+            head = null;
             return;
         }
-        empNode emp = find(id);
-        if(emp == null)
-        {
-            System.out.println("不存在此id");
-            return;
-        }
-        empNode tmp = head;
+        empNode emp = head;
         while(true)
         {
-            if(tmp.next.id == tmp.id)
+            if(emp.next == null)
             {
+                return;
+            }
+
+            if(emp.next.id == id)
+            {
+                emp.next = emp.next.next;
                 break;
             }
-            tmp = tmp.next;
+
+            emp = emp.next;
         }
-        tmp.next = tmp.next.next;
+
+
+
     }
 
     public void show()
@@ -82,7 +94,7 @@ public class empNodeList {
         empNode tmp = head;
         while(true)
         {
-            System.out.println(tmp);
+            System.out.print(tmp);
             if(tmp.next == null)
             {
                 break;
